@@ -63,7 +63,7 @@ REPORT_OUTPUT_DIR = OUTPUT_DIR # where to save the text report
 # =============================================================================
 # LOAD MODELS
 # =============================================================================
-model_prim = torch.load(MODEL_QC_DIR + MODEL_QC_NAME, map_location=DEVICE)
+model_prim = torch.load(MODEL_QC_DIR + MODEL_QC_NAME, map_location=DEVICE, weights_only=False)
 
 # ====================================================================
 # PREPARE REPORT FILE, OUTPUT FOLDERS
