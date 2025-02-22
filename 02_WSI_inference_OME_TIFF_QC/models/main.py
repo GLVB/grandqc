@@ -122,7 +122,7 @@ for slide_name in slide_names[start:end]:
         Two variants: reduced version with perfect correlation or full version scaled to working MPP of the tumor detection model
         Classes: 0 - tissue, 1 - background
         '''
-        tis_det_map_mpp = np.array(tis_det_map.resize((int(w_l0 * mpp / MPP_MODEL_1),
+        tis_det_map_mpp = np.array(tis_det_map.convert("L").resize((int(w_l0 * mpp / MPP_MODEL_1),
                                                        int(h_l0 * mpp / MPP_MODEL_1)), Image.Resampling.LANCZOS))
     except:
         tis_det_map_mpp = np.zeros((int(w_l0 * mpp / MPP_MODEL_1), int(h_l0 * mpp / MPP_MODEL_1)))
